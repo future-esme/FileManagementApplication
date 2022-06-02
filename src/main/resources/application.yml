@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    hikari:
+      auto-commit: false
+    url: jdbc:postgresql://localhost:5432/file
+    username: postgres
+    password: postgres
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+  jpa:
+    properties:
+      hibernate.format_sql: true
+    show-sql: true
+blog:
+  minio:
+    url: http://172.28.14.1:9000
+    bucket-name: demo
+    access-key: access_key
+    secret-key: secret_key
+logging:
+  level:
+    ROOT: DEBUG

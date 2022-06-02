@@ -1,0 +1,7 @@
+id;uuid_doc;title;path;size;mime_type
+1;default/user/template1.jpg;template1.jpg;demo;57;image/jpeg
+2;default/user/banner.txt;banner.txt;demo;12;text/plain
+3;default/user/activationEmail.html;activationEmail.html;demo;12;text/html
+4;default/admin/template2.jpg;template2.jpg;demo;12;image/jpeg
+5;default/admin/db.changelog-master.xml;db.changelog-master.xml;demo;12;application/xml
+6;default/admin/WEB-EXAM[924].docx;WEB-EXAM[924].docx;demo;12;application/vnd.openxmlformats-officedocument.wordprocessingml.document

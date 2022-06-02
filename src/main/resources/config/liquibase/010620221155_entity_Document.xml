@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    
+    <changeSet id="010620221155-1" author="esempla">
+        <createTable tableName="document">
+            <column name="id" type="bigserial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="uuid_doc" type="varchar(255)">
+                <constraints nullable="false" uniqueConstraintName="true"/>
+            </column>
+            <column name="title" type="varchar(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="path" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="size" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="mime_type" type="varchar(150)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <loadData file="config/liquibase/data/document.csv" separator=";" tableName="document">
+            <column name="id" type="numeric"/>
+            <column name="uuid_doc" type="string"/>
+            <column name="title" type="string"/>
+            <column name="path" type="string"/>
+            <column name="size" type="numeric"/>
+            <column name="mime_type" type="string"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
